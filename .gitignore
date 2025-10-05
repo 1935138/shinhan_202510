@@ -9,8 +9,12 @@ wheels/
 # Virtual environments
 .venv
 
-# data files
-data/
+# Raw data files (large CSV files)
+data/raw/
+
+# Processed data files
+data/processed/*.csv
+data/predictions/*.csv
 
 # CLAUDE
 .claude/
