@@ -12,5 +12,6 @@ wheels/
 # data files
 data/
 
-# CLAUDE.md
+# CLAUDE
+.claude/
 CLAUDE.md
