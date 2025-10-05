@@ -15,15 +15,17 @@ from typing import Tuple, Optional
 class DataLoader:
     """데이터셋 로드 및 병합을 위한 클래스"""
 
-    def __init__(self, data_dir: str = "data"):
+    def __init__(self):
         """
-        Args:
-            data_dir: 데이터 파일이 있는 디렉토리 경로
+        Raw 데이터 파일은 프로젝트의 data/raw/ 디렉토리에 고정
         """
-        self.data_dir = Path(data_dir)
-        self.dataset1_path = self.data_dir / "big_data_set1_f.csv"
-        self.dataset2_path = self.data_dir / "big_data_set2_f.csv"
-        self.dataset3_path = self.data_dir / "big_data_set3_f.csv"
+        # 프로젝트 루트 디렉토리 (pipeline/preprocessing/data_loader.py 기준)
+        project_root = Path(__file__).parent.parent.parent
+        raw_data_dir = project_root / "data" / "raw"
+
+        self.dataset1_path = raw_data_dir / "big_data_set1_f.csv"
+        self.dataset2_path = raw_data_dir / "big_data_set2_f.csv"
+        self.dataset3_path = raw_data_dir / "big_data_set3_f.csv"
 
     def load_dataset1(self) -> pd.DataFrame:
         """
@@ -184,17 +186,14 @@ class DataLoader:
         return info
 
 
-def load_and_merge_data(data_dir: str = "data") -> pd.DataFrame:
+def load_and_merge_data() -> pd.DataFrame:
     """
     편의 함수: 데이터 로드 및 병합을 한번에 수행
-
-    Args:
-        data_dir: 데이터 디렉토리 경로
 
     Returns:
         병합된 데이터프레임
     """
-    loader = DataLoader(data_dir)
+    loader = DataLoader()
     df_merged = loader.merge_datasets()
     return df_merged
 

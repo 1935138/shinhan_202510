@@ -1,0 +1,1522 @@
+[
+  {
+    "merchant_id": "2541119B6A",
+    "closure_probability": 0.9690486192703247,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 90.7,
+        "shap_value": 1.689104437828064,
+        "impact": "increase"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.4844478666782379,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 69.27877947295423,
+        "shap_value": 0.34732240438461304,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.32904812693595886,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 16.2,
+        "shap_value": 0.3132515549659729,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 3.0,
+        "shap_value": 0.2449599951505661,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 9.4,
+        "shap_value": 0.21188358962535858,
+        "impact": "increase"
+      },
+      {
+        "feature": "health_index_12m",
+        "feature_kr": "건강도 지수 (12개월)",
+        "value": 0.5866697652190306,
+        "shap_value": -0.2019483745098114,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 95.8,
+        "shap_value": 0.18775399029254913,
+        "impact": "increase"
+      },
+      {
+        "feature": "month",
+        "feature_kr": "월",
+        "value": 12.0,
+        "shap_value": -0.12407179176807404,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "2D3C8D6F8A",
+    "closure_probability": 0.8881728649139404,
+    "risk_factors": [
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 97.6,
+        "shap_value": 0.749690055847168,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_50_RAT",
+        "feature_kr": "여성 50대 비중",
+        "value": 22.1341,
+        "shap_value": 0.45561131834983826,
+        "impact": "increase"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 8.7,
+        "shap_value": 0.3583211898803711,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_30_RAT",
+        "feature_kr": "남성 30대 비중",
+        "value": 4.7841,
+        "shap_value": 0.32304033637046814,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 39.95801259622114,
+        "shap_value": 0.3221336007118225,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 3.1666666666666665,
+        "shap_value": 0.26654425263404846,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 5.0,
+        "shap_value": 0.26500850915908813,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_ma_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 평균)",
+        "value": 16.911666666666665,
+        "shap_value": 0.25232499837875366,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 11.9818,
+        "shap_value": 0.24661216139793396,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_40_RAT",
+        "feature_kr": "남성 40대 비중",
+        "value": 4.7841,
+        "shap_value": 0.21845927834510803,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "216590EA3B",
+    "closure_probability": 0.8594852685928345,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 93.4,
+        "shap_value": 0.9993796944618225,
+        "impact": "increase"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.5183877944946289,
+        "impact": "increase"
+      },
+      {
+        "feature": "customer_new_avg_12m",
+        "feature_kr": "신규 고객 비중 (12개월)",
+        "value": 1.6900000000000002,
+        "shap_value": -0.39935222268104553,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.33005833625793457,
+        "impact": "increase"
+      },
+      {
+        "feature": "health_index_12m",
+        "feature_kr": "건강도 지수 (12개월)",
+        "value": 0.5941537724182413,
+        "shap_value": -0.25923028588294983,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 9.4,
+        "shap_value": 0.23576870560646057,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 24.66802860061288,
+        "shap_value": 0.23177790641784668,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 16.7,
+        "shap_value": 0.22172360122203827,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 3.0,
+        "shap_value": 0.2006298154592514,
+        "impact": "increase"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0474542028754383,
+        "shap_value": -0.18389390408992767,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "8C6E34858D",
+    "closure_probability": 0.6146860122680664,
+    "risk_factors": [
+      {
+        "feature": "M12_MAL_40_RAT",
+        "feature_kr": "남성 40대 비중",
+        "value": 5.3576,
+        "shap_value": 0.4399106800556183,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_30_RAT",
+        "feature_kr": "여성 30대 비중",
+        "value": 20.3456,
+        "shap_value": 0.43070894479751587,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 73.4,
+        "shap_value": -0.428268164396286,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 19.992113564668767,
+        "shap_value": 0.32699722051620483,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_30_RAT",
+        "feature_kr": "남성 30대 비중",
+        "value": 8.5544,
+        "shap_value": 0.258725643157959,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.8568,
+        "shap_value": 0.25073832273483276,
+        "impact": "increase"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 33.5,
+        "shap_value": 0.24312005937099457,
+        "impact": "increase"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0298362571471569,
+        "shap_value": -0.23512840270996094,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 5.0,
+        "shap_value": -0.23176179826259613,
+        "impact": "decrease"
+      },
+      {
+        "feature": "customer_new_trend_6m",
+        "feature_kr": "신규 고객 추세 (6개월)",
+        "value": -0.8454285714285713,
+        "shap_value": -0.19594712555408478,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "0806C51324",
+    "closure_probability": 0.6076561212539673,
+    "risk_factors": [
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 21.5,
+        "shap_value": 0.5334181189537048,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 0.0,
+        "shap_value": -0.47891637682914734,
+        "impact": "decrease"
+      },
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 69.6,
+        "shap_value": 0.46145427227020264,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_30_RAT",
+        "feature_kr": "여성 30대 비중",
+        "value": 26.9136,
+        "shap_value": -0.3552250862121582,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.4752,
+        "shap_value": 0.33938920497894287,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_rank_change_6m",
+        "feature_kr": "매출건수 (6개월 순위 변화)",
+        "value": -914.0,
+        "shap_value": 0.3311426043510437,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 5.0,
+        "shap_value": 0.2643207311630249,
+        "impact": "increase"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0707306111088417,
+        "shap_value": 0.22045768797397614,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SHC_FLP_UE_CLN_RAT",
+        "feature_kr": "유동인구 이용 고객 비율",
+        "value": 64.1,
+        "shap_value": -0.20574919879436493,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_1020_RAT",
+        "feature_kr": "여성 20대이하 비중",
+        "value": 23.4248,
+        "shap_value": -0.17980201542377472,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "DD4FCA5BE6",
+    "closure_probability": 0.6072685718536377,
+    "risk_factors": [
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 66.2,
+        "shap_value": 1.2762635946273804,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 6.0,
+        "shap_value": 0.5079253315925598,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 19.1659,
+        "shap_value": -0.42244094610214233,
+        "impact": "decrease"
+      },
+      {
+        "feature": "customer_reu_std_12m",
+        "feature_kr": "재방문 고객 변동성 (12개월)",
+        "value": 8.527976704158302,
+        "shap_value": -0.3341881036758423,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_40_RAT",
+        "feature_kr": "여성 40대 비중",
+        "value": 5.5286,
+        "shap_value": 0.3184182345867157,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_30_RAT",
+        "feature_kr": "남성 30대 비중",
+        "value": 22.7555,
+        "shap_value": -0.1932557076215744,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_30_RAT",
+        "feature_kr": "여성 30대 비중",
+        "value": 12.7445,
+        "shap_value": 0.19001419842243195,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT",
+        "feature_kr": "재방문 고객 비중",
+        "value": 38.5,
+        "shap_value": 0.17550961673259735,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_cv_12m",
+        "feature_kr": "매출금액 (12개월 변동계수)",
+        "value": 0.128920512778062,
+        "shap_value": -0.16208337247371674,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_60_RAT",
+        "feature_kr": "여성 60대이상 비중",
+        "value": 2.5489,
+        "shap_value": -0.15980282425880432,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "5FE5C42B70",
+    "closure_probability": 0.5915106534957886,
+    "risk_factors": [
+      {
+        "feature": "M12_MAL_30_RAT",
+        "feature_kr": "남성 30대 비중",
+        "value": 8.319,
+        "shap_value": 0.576039731502533,
+        "impact": "increase"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.4374774694442749,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": -21.60727824109173,
+        "shap_value": -0.4292822480201721,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_40_RAT",
+        "feature_kr": "남성 40대 비중",
+        "value": 1.6074,
+        "shap_value": -0.3230360150337219,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 5.0,
+        "shap_value": 0.31443876028060913,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_50_RAT",
+        "feature_kr": "남성 50대 비중",
+        "value": 2.8764,
+        "shap_value": 0.2960778772830963,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_ma_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 평균)",
+        "value": 11.160833333333334,
+        "shap_value": -0.29387325048446655,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_UE_CLN_NEW_RAT",
+        "feature_kr": "신규 고객 비중",
+        "value": 0.0,
+        "shap_value": 0.2849656045436859,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 14.7486,
+        "shap_value": 0.20525436103343964,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_cv_12m",
+        "feature_kr": "고객수 (12개월 변동계수)",
+        "value": 0.1662159945929573,
+        "shap_value": -0.1690625697374344,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "50BD9E37F2",
+    "closure_probability": 0.5120329856872559,
+    "risk_factors": [
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 23.2,
+        "shap_value": 0.4604332447052002,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_ma_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 평균)",
+        "value": 28.815,
+        "shap_value": -0.3138762414455414,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_40_RAT",
+        "feature_kr": "남성 40대 비중",
+        "value": 6.129,
+        "shap_value": 0.3133290112018585,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_40_RAT",
+        "feature_kr": "여성 40대 비중",
+        "value": 16.571,
+        "shap_value": -0.24415908753871918,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_rank_change_6m",
+        "feature_kr": "매출건수 (6개월 순위 변화)",
+        "value": -914.0,
+        "shap_value": 0.23143061995506287,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 5.0,
+        "shap_value": 0.21677535772323608,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 0.0,
+        "shap_value": -0.20502962172031403,
+        "impact": "decrease"
+      },
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 11.5,
+        "shap_value": 0.2024940848350525,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_ma_12m",
+        "feature_kr": "매출건수 (12개월 평균)",
+        "value": 3.625,
+        "shap_value": -0.19549560546875,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_UE_CUS_CN_ma_12m",
+        "feature_kr": "고객수 (12개월 평균)",
+        "value": 3.625,
+        "shap_value": 0.1914922147989273,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "003473B465",
+    "closure_probability": 0.4876275062561035,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 88.0,
+        "shap_value": 0.6892897486686707,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": -26.76267626762676,
+        "shap_value": -0.45948511362075806,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.41404250264167786,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.2979995012283325,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 94.9,
+        "shap_value": -0.28587251901626587,
+        "impact": "decrease"
+      },
+      {
+        "feature": "customer_new_avg_12m",
+        "feature_kr": "신규 고객 비중 (12개월)",
+        "value": 3.943333333333333,
+        "shap_value": -0.25733447074890137,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 9.0,
+        "shap_value": 0.23581849038600922,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_lag_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 전)",
+        "value": 33.33,
+        "shap_value": -0.20657919347286224,
+        "impact": "decrease"
+      },
+      {
+        "feature": "month",
+        "feature_kr": "월",
+        "value": 12.0,
+        "shap_value": -0.1951512098312378,
+        "impact": "decrease"
+      },
+      {
+        "feature": "risk_index_6m",
+        "feature_kr": "위험도 지수 (6개월)",
+        "value": 7.1104819549512e-18,
+        "shap_value": -0.14542637765407562,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "D6BA8B518B",
+    "closure_probability": 0.4840877652168274,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 84.6,
+        "shap_value": 0.7557458877563477,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 30.744509908944817,
+        "shap_value": 0.5221794843673706,
+        "impact": "increase"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.4491695761680603,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 89.9,
+        "shap_value": -0.4181656539440155,
+        "impact": "decrease"
+      },
+      {
+        "feature": "customer_new_avg_12m",
+        "feature_kr": "신규 고객 비중 (12개월)",
+        "value": 3.943333333333333,
+        "shap_value": -0.3586636483669281,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.31216660141944885,
+        "impact": "increase"
+      },
+      {
+        "feature": "health_index_12m",
+        "feature_kr": "건강도 지수 (12개월)",
+        "value": 0.5906062501422944,
+        "shap_value": -0.21980273723602295,
+        "impact": "decrease"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0510017251513853,
+        "shap_value": -0.2076411247253418,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_ma_12m",
+        "feature_kr": "매출건수 (12개월 평균)",
+        "value": 6.0,
+        "shap_value": -0.16460378468036652,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 6.0,
+        "shap_value": -0.1531672179698944,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "D4C5EBD12F",
+    "closure_probability": 0.48085886240005493,
+    "risk_factors": [
+      {
+        "feature": "M12_FME_60_RAT",
+        "feature_kr": "여성 60대이상 비중",
+        "value": 11.2725,
+        "shap_value": -0.6006532311439514,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 19.4,
+        "shap_value": 0.4871405065059662,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_50_RAT",
+        "feature_kr": "여성 50대 비중",
+        "value": 21.2925,
+        "shap_value": 0.4310348331928253,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_50_RAT",
+        "feature_kr": "남성 50대 비중",
+        "value": 21.2075,
+        "shap_value": 0.3945593535900116,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_40_RAT",
+        "feature_kr": "여성 40대 비중",
+        "value": 5.01,
+        "shap_value": 0.2237449735403061,
+        "impact": "increase"
+      },
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 95.7,
+        "shap_value": 0.22053690254688263,
+        "impact": "increase"
+      },
+      {
+        "feature": "health_index_12m",
+        "feature_kr": "건강도 지수 (12개월)",
+        "value": 0.5763084729968726,
+        "shap_value": -0.19677101075649261,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_60_RAT",
+        "feature_kr": "남성 60대이상 비중",
+        "value": 11.2275,
+        "shap_value": -0.18437403440475464,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 3.0,
+        "shap_value": 0.16536715626716614,
+        "impact": "increase"
+      },
+      {
+        "feature": "customer_new_trend_12m",
+        "feature_kr": "신규 고객 추세 (12개월)",
+        "value": -7.163939393939396,
+        "shap_value": -0.16012781858444214,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "C950C04B17",
+    "closure_probability": 0.45421302318573,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 88.6,
+        "shap_value": -0.6214089393615723,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.449455589056015,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 95.28000000000002,
+        "shap_value": 0.4079785943031311,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 11.5,
+        "shap_value": -0.40665456652641296,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 85.3,
+        "shap_value": 0.3504061698913574,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.32221001386642456,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 7.8,
+        "shap_value": -0.2975827157497406,
+        "impact": "decrease"
+      },
+      {
+        "feature": "customer_new_avg_12m",
+        "feature_kr": "신규 고객 비중 (12개월)",
+        "value": 1.6900000000000002,
+        "shap_value": -0.2255360186100006,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 6.0,
+        "shap_value": -0.18649019300937653,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 3.0,
+        "shap_value": 0.17528733611106873,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "759BF53FF1",
+    "closure_probability": 0.4522944688796997,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 86.5,
+        "shap_value": 0.7697011828422546,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 87.6,
+        "shap_value": -0.5984799265861511,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.3923105001449585,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.3173404633998871,
+        "impact": "increase"
+      },
+      {
+        "feature": "customer_new_avg_12m",
+        "feature_kr": "신규 고객 비중 (12개월)",
+        "value": 3.3800000000000003,
+        "shap_value": -0.24295590817928314,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 9.4,
+        "shap_value": 0.2379128783941269,
+        "impact": "increase"
+      },
+      {
+        "feature": "month",
+        "feature_kr": "월",
+        "value": 12.0,
+        "shap_value": -0.1799217313528061,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 6.0,
+        "shap_value": -0.14788350462913513,
+        "impact": "decrease"
+      },
+      {
+        "feature": "risk_index_6m",
+        "feature_kr": "위험도 지수 (6개월)",
+        "value": 7.1104819549512e-18,
+        "shap_value": -0.14438112080097198,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_SAA_RAT",
+        "feature_kr": "동일업종 매출금액 비율",
+        "value": 0.0,
+        "shap_value": -0.12182295322418213,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "0305234DDB",
+    "closure_probability": 0.44123849272727966,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 90.1,
+        "shap_value": 1.5871899127960205,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_lag_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 전)",
+        "value": 0.0,
+        "shap_value": -0.8920084834098816,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 11.5,
+        "shap_value": -0.772232711315155,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.4107496738433838,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.30049875378608704,
+        "impact": "increase"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0,
+        "shap_value": -0.19407273828983307,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 93.0,
+        "shap_value": -0.18838965892791748,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_SAA_RAT",
+        "feature_kr": "동일업종 매출금액 비율",
+        "value": 0.0,
+        "shap_value": -0.1712256669998169,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_AV_NP_AT_ma_12m",
+        "feature_kr": "객단가 (12개월 평균)",
+        "value": 6.0,
+        "shap_value": -0.16408666968345642,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 3.0,
+        "shap_value": 0.13592006266117096,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "E823EBBA3A",
+    "closure_probability": 0.4384244382381439,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 86.5,
+        "shap_value": 0.700005829334259,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": -19.59815546772068,
+        "shap_value": -0.4250277280807495,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.39175304770469666,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.2966345250606537,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 7.8,
+        "shap_value": -0.2608617842197418,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 96.4,
+        "shap_value": -0.23733524978160858,
+        "impact": "decrease"
+      },
+      {
+        "feature": "month",
+        "feature_kr": "월",
+        "value": 12.0,
+        "shap_value": -0.22175034880638123,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_lag_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 전)",
+        "value": 30.36,
+        "shap_value": -0.19138646125793457,
+        "impact": "decrease"
+      },
+      {
+        "feature": "risk_index_6m",
+        "feature_kr": "위험도 지수 (6개월)",
+        "value": 7.1104819549512e-18,
+        "shap_value": -0.14415180683135986,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_SAA_RAT",
+        "feature_kr": "동일업종 매출금액 비율",
+        "value": 0.0,
+        "shap_value": -0.12450676411390305,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "15E95AF364",
+    "closure_probability": 0.4273057281970978,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 12.1,
+        "shap_value": 0.6041951179504395,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 19.6,
+        "shap_value": -0.48123323917388916,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 0.0,
+        "shap_value": 0.37386569380760193,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_30_RAT",
+        "feature_kr": "여성 30대 비중",
+        "value": 15.8424,
+        "shap_value": -0.3530419170856476,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_30_RAT",
+        "feature_kr": "남성 30대 비중",
+        "value": 16.9576,
+        "shap_value": -0.2691282629966736,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_60_RAT",
+        "feature_kr": "여성 60대이상 비중",
+        "value": 5.2647,
+        "shap_value": 0.2613953649997711,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_40_RAT",
+        "feature_kr": "여성 40대 비중",
+        "value": 7.7763,
+        "shap_value": -0.24569885432720184,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 11.1155,
+        "shap_value": 0.23160994052886963,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 4.0,
+        "shap_value": 0.21580152213573456,
+        "impact": "increase"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0693910767990998,
+        "shap_value": 0.2146681547164917,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "38EDE3F91C",
+    "closure_probability": 0.41418588161468506,
+    "risk_factors": [
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.849,
+        "shap_value": 0.5492311716079712,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SAA_std_12m",
+        "feature_kr": "매출금액 (12개월 표준편차)",
+        "value": 1.224744871391589,
+        "shap_value": 0.49120157957077026,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_FME_40_RAT",
+        "feature_kr": "여성 40대 비중",
+        "value": 12.138,
+        "shap_value": -0.37136968970298767,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 371.1,
+        "shap_value": -0.35768017172813416,
+        "impact": "decrease"
+      },
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 23.2,
+        "shap_value": 0.35677391290664673,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 33.6,
+        "shap_value": -0.3509158492088318,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 6.0,
+        "shap_value": 0.3286465108394623,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_SHC_RSD_UE_CLN_RAT",
+        "feature_kr": "거주 이용 고객 비율",
+        "value": 86.1,
+        "shap_value": -0.2958157956600189,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_MAL_40_RAT",
+        "feature_kr": "남성 40대 비중",
+        "value": 11.662,
+        "shap_value": -0.2747586667537689,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_60_RAT",
+        "feature_kr": "여성 60대이상 비중",
+        "value": 6.528,
+        "shap_value": 0.2170269787311554,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "9A37DEDA8A",
+    "closure_probability": 0.4121308922767639,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 75.7,
+        "shap_value": -0.5637457370758057,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_SME_BZN_ME_MCT_RAT",
+        "feature_kr": "동일상권 해지 가맹점 비중",
+        "value": 7.8,
+        "shap_value": -0.4993578791618347,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": 83.81024096385543,
+        "shap_value": 0.3970802426338196,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_ma_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 평균)",
+        "value": 13.403333333333334,
+        "shap_value": -0.3885127604007721,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.3793850541114807,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.3690347373485565,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 18.0,
+        "shap_value": -0.23205485939979553,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_OPE_MS_CN",
+        "feature_kr": "운영개월수",
+        "value": 4.0,
+        "shap_value": 0.20448128879070282,
+        "impact": "increase"
+      },
+      {
+        "feature": "risk_index_12m",
+        "feature_kr": "위험도 지수 (12개월)",
+        "value": 0.0942648642713161,
+        "shap_value": 0.1573125422000885,
+        "impact": "increase"
+      },
+      {
+        "feature": "health_index_12m",
+        "feature_kr": "건강도 지수 (12개월)",
+        "value": 0.5473431110223635,
+        "shap_value": 0.14588342607021332,
+        "impact": "increase"
+      }
+    ]
+  },
+  {
+    "merchant_id": "A787679642",
+    "closure_probability": 0.40293267369270325,
+    "risk_factors": [
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 91.0,
+        "shap_value": 1.4473628997802734,
+        "impact": "increase"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_change_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 변화량)",
+        "value": -9.525574499629352,
+        "shap_value": -0.42164215445518494,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M1_SME_RY_CNT_RAT",
+        "feature_kr": "동일업종 매출건수 비율",
+        "value": 0.0,
+        "shap_value": 0.3968874216079712,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 9.89005,
+        "shap_value": 0.36365941166877747,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_SAA_PCE_RT",
+        "feature_kr": "동일업종 매출 순위",
+        "value": 94.6,
+        "shap_value": -0.3041048049926758,
+        "impact": "decrease"
+      },
+      {
+        "feature": "health_index_12m",
+        "feature_kr": "건강도 지수 (12개월)",
+        "value": 0.6245791605505463,
+        "shap_value": -0.24867185950279236,
+        "impact": "decrease"
+      },
+      {
+        "feature": "customer_new_trend_12m",
+        "feature_kr": "신규 고객 추세 (12개월)",
+        "value": 0.4727272727272725,
+        "shap_value": -0.18338626623153687,
+        "impact": "decrease"
+      },
+      {
+        "feature": "month",
+        "feature_kr": "월",
+        "value": 12.0,
+        "shap_value": -0.1554684191942215,
+        "impact": "decrease"
+      },
+      {
+        "feature": "MCT_UE_CLN_REU_RAT_lag_12m",
+        "feature_kr": "재방문 고객 비중 (12개월 전)",
+        "value": 26.98,
+        "shap_value": -0.14467740058898926,
+        "impact": "decrease"
+      },
+      {
+        "feature": "risk_index_6m",
+        "feature_kr": "위험도 지수 (6개월)",
+        "value": 7.1104819549512e-18,
+        "shap_value": -0.14008784294128418,
+        "impact": "decrease"
+      }
+    ]
+  },
+  {
+    "merchant_id": "1E7A13BB3E",
+    "closure_probability": 0.40094292163848877,
+    "risk_factors": [
+      {
+        "feature": "M12_FME_40_RAT",
+        "feature_kr": "여성 40대 비중",
+        "value": 16.5825,
+        "shap_value": -0.6991862058639526,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_60_RAT",
+        "feature_kr": "여성 60대이상 비중",
+        "value": 11.9394,
+        "shap_value": -0.4058138430118561,
+        "impact": "decrease"
+      },
+      {
+        "feature": "M12_FME_30_RAT",
+        "feature_kr": "여성 30대 비중",
+        "value": 13.5072,
+        "shap_value": 0.3598993420600891,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_RY_ME_MCT_RAT",
+        "feature_kr": "동일업종 해지 가맹점 비중",
+        "value": 10.4,
+        "shap_value": -0.3551201820373535,
+        "impact": "decrease"
+      },
+      {
+        "feature": "loyalty_score_avg_12m",
+        "feature_kr": "고객 충성도 (12개월)",
+        "value": 8.444178978098483,
+        "shap_value": 0.3154619634151459,
+        "impact": "increase"
+      },
+      {
+        "feature": "RC_M1_TO_UE_CT_ma_12m",
+        "feature_kr": "매출건수 (12개월 평균)",
+        "value": 3.9166666666666665,
+        "shap_value": -0.3105126619338989,
+        "impact": "decrease"
+      },
+      {
+        "feature": "RC_M1_SHC_FLP_UE_CLN_RAT",
+        "feature_kr": "유동인구 이용 고객 비율",
+        "value": 5.6,
+        "shap_value": 0.294626921415329,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_MAL_1020_RAT",
+        "feature_kr": "남성 20대이하 비중",
+        "value": 0.5161,
+        "shap_value": 0.28137272596359253,
+        "impact": "increase"
+      },
+      {
+        "feature": "M12_SME_BZN_SAA_PCE_RT",
+        "feature_kr": "동일상권 매출 순위",
+        "value": 0.0,
+        "shap_value": 0.26281505823135376,
+        "impact": "increase"
+      },
+      {
+        "feature": "DLV_SAA_RAT",
+        "feature_kr": "배달매출 비율",
+        "value": 0.0,
+        "shap_value": -0.2548992931842804,
+        "impact": "decrease"
+      }
+    ]
+  }
+]
