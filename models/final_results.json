@@ -1,0 +1,19 @@
+{
+  "model": "XGBoost (Tuned)",
+  "test_precision": 0.7517006802721088,
+  "test_recall": 0.3784246575342466,
+  "test_f1": 0.5034168564920274,
+  "test_roc_auc": 0.9259592822855454,
+  "test_pr_auc": 0.5481875148847299,
+  "best_params": {
+    "subsample": 0.8,
+    "n_estimators": 200,
+    "min_child_weight": 3,
+    "max_depth": 8,
+    "learning_rate": 0.1,
+    "colsample_bytree": 0.8
+  },
+  "feature_count": 168,
+  "train_samples": 62280,
+  "test_samples": 24310
+}
