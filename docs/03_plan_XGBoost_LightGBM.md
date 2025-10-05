@@ -147,8 +147,15 @@ lgb_model = LGBMClassifier(
 1. **데이터 로드 및 병합**
    ```python
    # Dataset 1 + 2 + 3 통합
+   # Step 1: Dataset 2(월별 매출/이용 현황) + Dataset 3(월별 고객 정보)를 가맹점ID와 년월 기준으로 병합
+   #         → 같은 가맹점의 같은 월 데이터를 옆으로 붙임
    df_merged = df2.merge(df3, on=['ENCODED_MCT', 'TA_YM'])
+
+   # Step 2: 위 결과 + Dataset 1(가맹점 기본정보: 업종, 위치, 폐업일)을 가맹점ID 기준으로 병합
+   #         → 가맹점별 고정 정보를 모든 월 데이터에 추가
    df_full = df_merged.merge(df1[['ENCODED_MCT', ...]], on='ENCODED_MCT')
+
+   # 최종: 각 행이 "특정 가맹점의 특정 월" 데이터가 됨 (시계열 분석 가능)
    ```
 
 2. **타겟 변수 생성**
@@ -185,8 +192,8 @@ lgb_model = LGBMClassifier(
 
 #### 산출물
 - `notebooks/02_preprocessing.ipynb`
-- `src/preprocessing/data_loader.py`
-- `src/preprocessing/feature_encoder.py`
+- `pipeline/preprocessing/data_loader.py`
+- `pipeline/preprocessing/feature_encoder.py`
 
 ---
 
@@ -274,9 +281,9 @@ lgb_model = LGBMClassifier(
 
 #### 산출물
 - `notebooks/03_feature_engineering.ipynb`
-- `src/features/time_series_features.py`
-- `src/features/customer_features.py`
-- `src/features/composite_features.py`
+- `pipeline/features/time_series_features.py`
+- `pipeline/features/customer_features.py`
+- `pipeline/features/composite_features.py`
 
 ---
 
@@ -381,8 +388,8 @@ lgb_model = LGBMClassifier(
 #### 산출물
 - `notebooks/04_model_xgboost.ipynb`
 - `notebooks/05_model_lightgbm.ipynb`
-- `src/models/xgboost_model.py`
-- `src/models/lightgbm_model.py`
+- `pipeline/models/xgboost_model.py`
+- `pipeline/models/lightgbm_model.py`
 - `models/xgb_baseline.pkl`
 - `models/lgb_baseline.pkl`
 
@@ -500,7 +507,7 @@ lgb_model = LGBMClassifier(
 #### 산출물
 - `notebooks/06_hyperparameter_tuning.ipynb`
 - `notebooks/07_ensemble.ipynb`
-- `src/models/ensemble.py`
+- `pipeline/models/ensemble.py`
 - `models/xgb_tuned.pkl`
 - `models/lgb_tuned.pkl`
 - `models/ensemble_voting.pkl`
@@ -626,7 +633,7 @@ lgb_model = LGBMClassifier(
 #### 산출물
 - `notebooks/08_shap_analysis.ipynb`
 - `notebooks/09_insights.ipynb`
-- `src/visualization/shap_plots.py`
+- `pipeline/visualization/shap_plots.py`
 - `results/feature_importance.csv`
 - `results/risk_patterns_by_industry.csv`
 - `results/shap_summary.png`
@@ -1138,7 +1145,7 @@ shinhan_202510/
 │   ├── 09_insights.ipynb
 │   └── 10_business_proposal.ipynb
 │
-├── src/                           # 소스 코드 모듈
+├── pipeline/                      # ML 파이프라인 모듈
 │   ├── __init__.py
 │   │
 │   ├── preprocessing/
