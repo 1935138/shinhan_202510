@@ -149,7 +149,10 @@ class CustomerFeatureEngine:
         features_created = 0
 
         # Instant loyalty score (returning / new ratio)
-        df_result['loyalty_score'] = df_result[reu_col] / df_result[new_col].replace(0, np.nan)
+        loyalty_score = df_result[reu_col] / df_result[new_col].replace(0, np.nan)
+        # Replace inf values with NaN (occurs when dividing by 0 or very small values)
+        loyalty_score = loyalty_score.replace([np.inf, -np.inf], np.nan)
+        df_result['loyalty_score'] = loyalty_score
         features_created += 1
 
         for window in windows:
@@ -186,7 +189,12 @@ class CustomerFeatureEngine:
                 lambda x: x.rolling(window=window, min_periods=1).std()
             )
             cv = rolling_std / rolling_mean.replace(0, np.nan)
-            df_result[f'customer_stability_{window}m'] = 1 / (1 + cv)  # Normalize to 0-1 range
+            # Replace inf values with NaN
+            cv = cv.replace([np.inf, -np.inf], np.nan)
+            stability = 1 / (1 + cv)
+            # Replace any remaining inf values
+            stability = stability.replace([np.inf, -np.inf], np.nan)
+            df_result[f'customer_stability_{window}m'] = stability
             features_created += 1
 
         print(f"Created {features_created} loyalty indicator features")

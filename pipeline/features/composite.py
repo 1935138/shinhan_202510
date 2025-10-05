@@ -69,7 +69,10 @@ class CompositeFeatureEngine:
             volatility_col = f'RC_M1_SAA_cv_{window}m'
             if volatility_col in df_result.columns:
                 # Normalize and invert
-                df_result[f'_inv_volatility_{window}m'] = 1 / (1 + df_result[volatility_col].fillna(0))
+                inv_volatility = 1 / (1 + df_result[volatility_col].fillna(0))
+                # Replace inf values with NaN
+                inv_volatility = inv_volatility.replace([np.inf, -np.inf], np.nan)
+                df_result[f'_inv_volatility_{window}m'] = inv_volatility
                 health_components.append(f'_inv_volatility_{window}m')
 
             if len(health_components) > 0:
@@ -248,7 +251,10 @@ class CompositeFeatureEngine:
             for den_col in denominator_cols:
                 if num_col in df_result.columns and den_col in df_result.columns:
                     ratio_col_name = f"{num_col}_div_{den_col}"
-                    df_result[ratio_col_name] = df_result[num_col] / df_result[den_col].replace(0, np.nan)
+                    ratio_values = df_result[num_col] / df_result[den_col].replace(0, np.nan)
+                    # Replace inf values with NaN
+                    ratio_values = ratio_values.replace([np.inf, -np.inf], np.nan)
+                    df_result[ratio_col_name] = ratio_values
                     features_created += 1
                 else:
                     print(f"Warning: One or both features not found: {num_col}, {den_col}")

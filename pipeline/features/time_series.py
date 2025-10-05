@@ -147,7 +147,10 @@ class TimeSeriesFeatureEngine:
 
             for period in periods:
                 change_col_name = f"{col}_change_{period}m"
-                df_result[change_col_name] = df_result.groupby(self.merchant_col)[col].pct_change(periods=period) * 100
+                change_values = df_result.groupby(self.merchant_col)[col].pct_change(periods=period) * 100
+                # Replace inf values with NaN (occurs when dividing by 0)
+                change_values = change_values.replace([np.inf, -np.inf], np.nan)
+                df_result[change_col_name] = change_values
 
         print(f"Created {len(columns) * len(periods)} change rate features")
 
@@ -250,7 +253,10 @@ class TimeSeriesFeatureEngine:
                     lambda x: x.rolling(window=window, min_periods=1).mean()
                 )
                 rolling_std = df_result[std_col_name]
-                df_result[cv_col_name] = rolling_std / rolling_mean.replace(0, np.nan)
+                # Replace 0 and very small values with NaN to avoid inf
+                cv_values = rolling_std / rolling_mean.replace(0, np.nan)
+                cv_values = cv_values.replace([np.inf, -np.inf], np.nan)
+                df_result[cv_col_name] = cv_values
 
         print(f"Created {len(columns) * len(windows) * 2} volatility indicator features")
 
