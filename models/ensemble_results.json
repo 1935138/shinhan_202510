@@ -1,0 +1,23 @@
+{
+  "best_model": "XGBoost (Tuned)",
+  "test_metrics": {
+    "roc_auc": 0.9259592822855454,
+    "f1_score": 0.5034168564920274,
+    "precision": 0.7517006802721088,
+    "recall": 0.3784246575342466,
+    "pr_auc": 0.5481875148847299
+  },
+  "optimized_weights": {
+    "xgboost": 0.5,
+    "lightgbm": 0.5
+  },
+  "stacking_coefficients": {
+    "xgboost": 8.714280892883027,
+    "lightgbm": 4.298027256879664,
+    "intercept": -6.516817521133507
+  },
+  "improvement_over_baseline": {
+    "baseline_roc_auc": 0.9259592822855454,
+    "improvement_percent": 0.0
+  }
+}
