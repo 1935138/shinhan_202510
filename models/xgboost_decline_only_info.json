@@ -1,0 +1,191 @@
+{
+  "model_type": "XGBoost",
+  "features": [
+    "RC_M1_SAA_consecutive_declines",
+    "RC_M1_SAA_decline_count_3m",
+    "RC_M1_SAA_decline_count_6m",
+    "RC_M1_SAA_decline_count_12m",
+    "RC_M1_SAA_total_decline_3m",
+    "RC_M1_SAA_total_decline_6m",
+    "RC_M1_SAA_total_decline_12m",
+    "RC_M1_SAA_decline_speed_3m",
+    "RC_M1_SAA_decline_speed_6m",
+    "RC_M1_TO_UE_CT_consecutive_declines",
+    "RC_M1_TO_UE_CT_decline_count_3m",
+    "RC_M1_TO_UE_CT_decline_count_6m",
+    "RC_M1_TO_UE_CT_decline_count_12m",
+    "RC_M1_TO_UE_CT_total_decline_3m",
+    "RC_M1_TO_UE_CT_total_decline_6m",
+    "RC_M1_TO_UE_CT_total_decline_12m",
+    "RC_M1_TO_UE_CT_decline_speed_3m",
+    "RC_M1_TO_UE_CT_decline_speed_6m",
+    "RC_M1_UE_CUS_CN_consecutive_declines",
+    "RC_M1_UE_CUS_CN_decline_count_3m",
+    "RC_M1_UE_CUS_CN_decline_count_6m",
+    "RC_M1_UE_CUS_CN_decline_count_12m",
+    "RC_M1_UE_CUS_CN_total_decline_3m",
+    "RC_M1_UE_CUS_CN_total_decline_6m",
+    "RC_M1_UE_CUS_CN_total_decline_12m",
+    "RC_M1_UE_CUS_CN_decline_speed_3m",
+    "RC_M1_UE_CUS_CN_decline_speed_6m",
+    "RC_M1_AV_NP_AT_consecutive_declines",
+    "RC_M1_AV_NP_AT_decline_count_3m",
+    "RC_M1_AV_NP_AT_decline_count_6m",
+    "RC_M1_AV_NP_AT_decline_count_12m",
+    "RC_M1_AV_NP_AT_total_decline_3m",
+    "RC_M1_AV_NP_AT_total_decline_6m",
+    "RC_M1_AV_NP_AT_total_decline_12m",
+    "RC_M1_AV_NP_AT_decline_speed_3m",
+    "RC_M1_AV_NP_AT_decline_speed_6m"
+  ],
+  "feature_count": 36,
+  "test_roc_auc": 0.6931643483953542,
+  "test_pr_auc": 0.0017850378268448408,
+  "test_detection_rate": 0.2727272727272727,
+  "feature_importance": [
+    {
+      "feature": "RC_M1_SAA_decline_count_3m",
+      "importance": 0.08663434535264969
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_decline_count_6m",
+      "importance": 0.08638877421617508
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_decline_count_12m",
+      "importance": 0.05787636712193489
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_decline_count_12m",
+      "importance": 0.05487364903092384
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_consecutive_declines",
+      "importance": 0.049353379756212234
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_total_decline_12m",
+      "importance": 0.04897183179855347
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_total_decline_6m",
+      "importance": 0.045925918966531754
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_decline_count_3m",
+      "importance": 0.040719322860240936
+    },
+    {
+      "feature": "RC_M1_SAA_total_decline_12m",
+      "importance": 0.03756316378712654
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_total_decline_3m",
+      "importance": 0.034153714776039124
+    },
+    {
+      "feature": "RC_M1_SAA_decline_count_12m",
+      "importance": 0.03388853743672371
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_decline_count_12m",
+      "importance": 0.03294193372130394
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_total_decline_3m",
+      "importance": 0.03200369328260422
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_decline_count_6m",
+      "importance": 0.02962867170572281
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_total_decline_6m",
+      "importance": 0.029361052438616753
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_decline_count_3m",
+      "importance": 0.02884743921458721
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_consecutive_declines",
+      "importance": 0.02743230015039444
+    },
+    {
+      "feature": "RC_M1_SAA_total_decline_6m",
+      "importance": 0.02672540955245495
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_decline_count_3m",
+      "importance": 0.02605067379772663
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_total_decline_12m",
+      "importance": 0.024217167869210243
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_consecutive_declines",
+      "importance": 0.024173375219106674
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_total_decline_3m",
+      "importance": 0.02372407540678978
+    },
+    {
+      "feature": "RC_M1_SAA_total_decline_3m",
+      "importance": 0.023640256375074387
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_total_decline_6m",
+      "importance": 0.022311970591545105
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_decline_count_6m",
+      "importance": 0.021406950429081917
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_total_decline_12m",
+      "importance": 0.017491742968559265
+    },
+    {
+      "feature": "RC_M1_SAA_consecutive_declines",
+      "importance": 0.01730017177760601
+    },
+    {
+      "feature": "RC_M1_SAA_decline_count_6m",
+      "importance": 0.01639409549534321
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_decline_speed_3m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_TO_UE_CT_decline_speed_6m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_SAA_decline_speed_3m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_SAA_decline_speed_6m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_decline_speed_6m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_UE_CUS_CN_decline_speed_3m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_decline_speed_3m",
+      "importance": 0.0
+    },
+    {
+      "feature": "RC_M1_AV_NP_AT_decline_speed_6m",
+      "importance": 0.0
+    }
+  ]
+}
