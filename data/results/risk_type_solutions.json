@@ -81,7 +81,7 @@
     "estimated_recovery_period": "N/A",
     "intervention_timing": "정기 점검",
     "success_rate": "N/A",
-    "description": "위험도 낮음 (risk_score < 60). 정기 모니터링 및 예방적 관리"
+    "description": "위험도 낮음 (risk_score < 50). 정기 모니터링 및 예방적 관리"
   },
   "기타 위험": {
     "solutions": [

@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "total_merchants": 4058,
+    "prediction_date": "202412",
+    "risk_types": [
+      "정상",
+      "고객 이탈형",
+      "기타 위험",
+      "종합 위기형",
+      "배달 의존형",
+      "경쟁 열위형"
+    ]
+  },
+  "type_distribution": {
+    "정상": 3996,
+    "고객 이탈형": 32,
+    "종합 위기형": 18,
+    "배달 의존형": 6,
+    "경쟁 열위형": 4,
+    "기타 위험": 2
+  },
+  "priority_distribution": {
+    "normal": 3998,
+    "important": 32,
+    "critical": 18,
+    "watch": 10
+  },
+  "type_statistics": {
+    "정상": {
+      "count": 3996,
+      "avg_risk_score": 6.9724724724724725,
+      "median_risk_score": 3.0,
+      "avg_closure_probability": 0.07484381645917892,
+      "avg_confidence": 0.0
+    },
+    "고객 이탈형": {
+      "count": 32,
+      "avg_risk_score": 58.625,
+      "median_risk_score": 55.5,
+      "avg_closure_probability": 0.5905866026878357,
+      "avg_confidence": 0.4625
+    },
+    "기타 위험": {
+      "count": 2,
+      "avg_risk_score": 65.5,
+      "median_risk_score": 65.5,
+      "avg_closure_probability": 0.6599917411804199,
+      "avg_confidence": 0.0
+    },
+    "종합 위기형": {
+      "count": 18,
+      "avg_risk_score": 54.72222222222222,
+      "median_risk_score": 54.0,
+      "avg_closure_probability": 0.5521552562713623,
+      "avg_confidence": 0.5972222222222222
+    },
+    "배달 의존형": {
+      "count": 6,
+      "avg_risk_score": 61.5,
+      "median_risk_score": 61.5,
+      "avg_closure_probability": 0.619080126285553,
+      "avg_confidence": 0.45933333333333337
+    },
+    "경쟁 열위형": {
+      "count": 4,
+      "avg_risk_score": 54.0,
+      "median_risk_score": 54.5,
+      "avg_closure_probability": 0.5458415150642395,
+      "avg_confidence": 0.7
+    }
+  }
+}
