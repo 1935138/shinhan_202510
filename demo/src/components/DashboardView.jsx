@@ -35,9 +35,10 @@ function DashboardView() {
           skipEmptyLines: true,
           complete: (results) => {
             setData(results.data)
-            // 기본: 위험군(High, Very High)만 표시
+            // 기본: 위험군(High, Very High) + 우선순위 높은 것만 표시
             const highRiskData = results.data.filter(item =>
-              item.risk_level === 'High' || item.risk_level === 'Very High'
+              (item.risk_level === 'High' || item.risk_level === 'Very High') &&
+              (item.priority === 'critical' || item.priority === 'important')
             )
             setFilteredData(highRiskData)
             setLoading(false)
@@ -94,17 +95,6 @@ function DashboardView() {
     stats.avgRiskScore = (stats.avgRiskScore / filteredData.length).toFixed(1)
   }
 
-  // 상권별 통계
-  const areaStats = {}
-  filteredData.forEach(item => {
-    const area = item.HPSN_MCT_BZN_CD_NM || '미분류'
-    if (!areaStats[area]) {
-      areaStats[area] = { count: 0, totalScore: 0 }
-    }
-    areaStats[area].count++
-    areaStats[area].totalScore += parseFloat(item.risk_score)
-  })
-
   // 고유 값 추출 (필터 옵션용)
   const uniqueAreas = [...new Set(data.map(item => item.HPSN_MCT_BZN_CD_NM).filter(Boolean))].sort()
   const uniqueRiskLevels = [...new Set(data.map(item => item.risk_level))].sort()
@@ -112,31 +102,31 @@ function DashboardView() {
   const uniquePriorities = [...new Set(data.map(item => item.priority))].sort()
 
   // 차트 데이터 준비
-  const riskLevelChartData = Object.entries(stats.byRiskLevel).map(([name, value]) => ({
-    name,
-    value,
-    percentage: ((value / stats.total) * 100).toFixed(1)
-  }))
-
-  const priorityChartData = Object.entries(stats.byPriority).map(([name, value]) => ({
-    name,
-    value,
-    percentage: ((value / stats.total) * 100).toFixed(1)
-  }))
-
-  const riskTypeChartData = Object.entries(stats.byRiskType).map(([name, value]) => ({
-    name,
-    value
-  }))
-
-  const areaChartData = Object.entries(areaStats)
-    .map(([name, data]) => ({
+  // 위험 등급 차트: Very Low 제외
+  const riskLevelChartData = Object.entries(stats.byRiskLevel)
+    .filter(([name]) => name !== 'Very Low')
+    .map(([name, value]) => ({
       name,
-      avgScore: (data.totalScore / data.count).toFixed(1),
-      count: data.count
+      value,
+      percentage: ((value / stats.total) * 100).toFixed(1)
     }))
-    .sort((a, b) => b.avgScore - a.avgScore)
-    .slice(0, 10) // 상위 10개
+
+  // 우선순위 차트: normal 제외
+  const priorityChartData = Object.entries(stats.byPriority)
+    .filter(([name]) => name !== 'normal')
+    .map(([name, value]) => ({
+      name,
+      value,
+      percentage: ((value / stats.total) * 100).toFixed(1)
+    }))
+
+  // 위험 유형 차트: "정상" 제외
+  const riskTypeChartData = Object.entries(stats.byRiskType)
+    .filter(([name]) => name !== '정상')
+    .map(([name, value]) => ({
+      name,
+      value
+    }))
 
   // 색상 팔레트 (Recharts용 hex, Badge용 Tailwind)
   const RISK_LEVEL_COLORS = {
@@ -154,7 +144,8 @@ function DashboardView() {
     'normal': '#65a30d'
   }
 
-  const RISK_TYPE_COLORS = ['#0046FF', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#6366f1']
+  // 신한 블루 단색 계열 (차분한 톤)
+  const RISK_TYPE_COLORS = ['#0046FF', '#3D7CFF', '#6B9FFF', '#0037CC', '#5B7BA8', '#002999']
 
   // Badge용 Tailwind 클래스
   const getRiskLevelBadgeClass = (level) => {
@@ -230,7 +221,7 @@ function DashboardView() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold text-shinhan">{stats.total}</div>
-              <p className="text-xs text-muted-foreground mt-1">High + Very High</p>
+              <p className="text-xs text-muted-foreground mt-1">우선 조치 대상</p>
             </CardContent>
           </Card>
 
@@ -300,6 +291,11 @@ function DashboardView() {
                   <Tooltip content={<CustomTooltip />} />
                 </PieChart>
               </ResponsiveContainer>
+              {stats.byRiskLevel['Very Low'] && (
+                <p className="text-xs text-muted-foreground mt-2">
+                  제외: Very Low ({stats.byRiskLevel['Very Low']}개)
+                </p>
+              )}
             </CardContent>
           </Card>
 
@@ -330,6 +326,11 @@ function DashboardView() {
                   <Tooltip content={<CustomTooltip />} />
                 </PieChart>
               </ResponsiveContainer>
+              {stats.byPriority['normal'] && (
+                <p className="text-xs text-muted-foreground mt-2">
+                  제외: normal ({stats.byPriority['normal']}개)
+                </p>
+              )}
             </CardContent>
           </Card>
 
@@ -353,38 +354,11 @@ function DashboardView() {
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
-            </CardContent>
-          </Card>
-
-          {/* 상권별 평균 위험도 */}
-          <Card className="lg:col-span-2">
-            <CardHeader>
-              <CardTitle>상권별 평균 위험 점수 (Top 10)</CardTitle>
-              <CardDescription>위험 점수가 높은 상위 10개 상권</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={areaChartData} layout="horizontal">
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis type="number" domain={[0, 100]} />
-                  <YAxis dataKey="name" type="category" width={80} />
-                  <Tooltip
-                    content={({ active, payload }) => {
-                      if (active && payload && payload.length) {
-                        return (
-                          <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
-                            <p className="font-semibold text-gray-900">{payload[0].payload.name}</p>
-                            <p className="text-sm text-gray-600">평균: {payload[0].value}점</p>
-                            <p className="text-sm text-gray-600">가맹점 수: {payload[0].payload.count}개</p>
-                          </div>
-                        )
-                      }
-                      return null
-                    }}
-                  />
-                  <Bar dataKey="avgScore" fill="#8b5cf6" />
-                </BarChart>
-              </ResponsiveContainer>
+              {stats.byRiskType['정상'] && (
+                <p className="text-xs text-muted-foreground mt-2">
+                  제외: 정상 ({stats.byRiskType['정상']}개)
+                </p>
+              )}
             </CardContent>
           </Card>
         </div>
@@ -398,7 +372,7 @@ function DashboardView() {
                 <CardDescription>조건을 선택하여 데이터를 필터링하세요</CardDescription>
               </div>
               <Badge variant="outline" className="text-sm">
-                📊 기본: 위험군(High, Very High)만 표시
+                📊 기본: High/Very High + critical/important만 표시
               </Badge>
             </div>
           </CardHeader>
