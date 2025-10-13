@@ -1,5 +1,5 @@
 {
-  "processing_date": "2025-10-06 01:38:02",
+  "processing_date": "2025-10-13 20:28:11",
   "shape": [
     86590,
     47
@@ -43,10 +43,10 @@
     "HPSN_MCT_BZN_CD_NM",
     "ARE_D",
     "MCT_ME_D",
-    "is_closed",
     "months_until_close",
     "will_close_1m",
     "will_close_3m",
+    "is_valid_for_training",
     "year",
     "month",
     "quarter",
@@ -92,10 +92,10 @@
     "HPSN_MCT_BZN_CD_NM": "object",
     "ARE_D": "int64",
     "MCT_ME_D": "float64",
-    "is_closed": "int64",
     "months_until_close": "float64",
     "will_close_1m": "int64",
     "will_close_3m": "int64",
+    "is_valid_for_training": "int64",
     "year": "int32",
     "month": "int32",
     "quarter": "int32",
@@ -111,9 +111,9 @@
     "APV_CE_RAT"
   ],
   "target_variables": [
-    "is_closed",
     "will_close_1m",
-    "will_close_3m"
+    "will_close_3m",
+    "is_valid_for_training"
   ],
   "date_features": [
     "year",

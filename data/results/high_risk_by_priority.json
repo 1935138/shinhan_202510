@@ -1,0 +1,357 @@
+{
+  "critical": [
+    {
+      "ENCODED_MCT": "BF88DF05E7",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 69,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "DD4FCA5BE6",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 61,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "F7E9A69F8D",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 60,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "0B91BA490B",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 56,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "BA5B405677",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 56,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.45
+    },
+    {
+      "ENCODED_MCT": "0E8F0F8410",
+      "HPSN_MCT_BZN_CD_NM": "마장동",
+      "risk_score": 56,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "CBBE8C9ACE",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 55,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.45
+    },
+    {
+      "ENCODED_MCT": "33EA4BF6E9",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 55,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "0ACB1E7718",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 54,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "4AB5E20EE4",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 54,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "656E1E70AF",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 53,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "92189088E5",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 53,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.7
+    },
+    {
+      "ENCODED_MCT": "2D7E5C7167",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 52,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "B01C36F034",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 51,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "8A9ADB6743",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 50,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "5113D031FD",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 50,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.4
+    },
+    {
+      "ENCODED_MCT": "C1D8EF8820",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 50,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.85
+    },
+    {
+      "ENCODED_MCT": "CAF68EC2CB",
+      "HPSN_MCT_BZN_CD_NM": "마장동",
+      "risk_score": 50,
+      "risk_type": "종합 위기형",
+      "classification_confidence": 0.45
+    }
+  ],
+  "urgent": [],
+  "important": [
+    {
+      "ENCODED_MCT": "1A9644F28E",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 84,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "259546987D",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 80,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "DD45EECEE3",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 72,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "790D3285E3",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 69,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "C56839C38F",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 69,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "0B36DDFB1B",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 68,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "94795C00AE",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 68,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "4CAFD6C3F4",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 63,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "44A9291640",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 61,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "FF55272DEB",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 61,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "DE1EB08231",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 57,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "FDE93C77D7",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 57,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "6FD5401343",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 57,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "9AFD0B9DFA",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 56,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "E0B79043DA",
+      "HPSN_MCT_BZN_CD_NM": "마장동",
+      "risk_score": 56,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "AFD6BFB090",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 56,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "C2261977A8",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 55,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "B113A0DC35",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 55,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "FBBAC0BE34",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 54,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "E7EF031D24",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 54,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "DF8B176772",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 54,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "209ED3E24F",
+      "HPSN_MCT_BZN_CD_NM": "한양대",
+      "risk_score": 53,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "7D29798181",
+      "HPSN_MCT_BZN_CD_NM": "마장동",
+      "risk_score": 53,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "04A4FBD34D",
+      "HPSN_MCT_BZN_CD_NM": "뚝섬",
+      "risk_score": 53,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.3
+    },
+    {
+      "ENCODED_MCT": "9F524F74CC",
+      "HPSN_MCT_BZN_CD_NM": "옥수",
+      "risk_score": 53,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "86DFE48F6F",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 53,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "35A9CD5DCA",
+      "HPSN_MCT_BZN_CD_NM": "성수",
+      "risk_score": 52,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "936ABF3C7F",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 52,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "3521453C6F",
+      "HPSN_MCT_BZN_CD_NM": "마장동",
+      "risk_score": 51,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "A869CB21ED",
+      "HPSN_MCT_BZN_CD_NM": "왕십리",
+      "risk_score": 50,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "DA4DC755CB",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 50,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.5
+    },
+    {
+      "ENCODED_MCT": "F0EEF6ECD0",
+      "HPSN_MCT_BZN_CD_NM": NaN,
+      "risk_score": 50,
+      "risk_type": "고객 이탈형",
+      "classification_confidence": 0.3
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "종합 위기형": {
+    "solutions": [
+      "긴급 안정화 패키지 (운영자금 + 컨설팅)",
+      "구조조정 지원 (경영 진단 + 전략 수립)",
+      "신용보증 특별 지원",
+      "우선 관리 대상 지정"
+    ],
+    "priority": "critical",
+    "priority_kr": "최우선 긴급",
+    "estimated_recovery_period": "6-12개월",
+    "intervention_timing": "즉시",
+    "success_rate": "30-40%",
+    "description": "여러 지표가 동시에 최악 상태. 즉각적이고 강력한 개입 필요"
+  },
+  "매출 급락형": {
+    "solutions": [
+      "단기 운영자금 대출 (저금리)",
+      "경영 컨설팅 (매출 분석 + 개선)",
+      "마케팅 지원 프로그램",
+      "업종 전환 컨설팅"
+    ],
+    "priority": "urgent",
+    "priority_kr": "긴급",
+    "estimated_recovery_period": "3-6개월",
+    "intervention_timing": "1주 이내",
+    "success_rate": "50-60%",
+    "description": "급격한 매출 하락. 빠른 원인 파악과 대응 전략 수립 필요"
+  },
+  "고객 이탈형": {
+    "solutions": [
+      "고객 리텐션 프로그램 지원",
+      "마케팅 지원 대출",
+      "고객 데이터 분석 서비스",
+      "재방문 캠페인 기획 지원"
+    ],
+    "priority": "important",
+    "priority_kr": "중요",
+    "estimated_recovery_period": "6-9개월",
+    "intervention_timing": "2주 이내",
+    "success_rate": "60-70%",
+    "description": "고객 이탈 가속화. 고객 관계 회복 및 신규 유치 전략 필요"
+  },
+  "배달 의존형": {
+    "solutions": [
+      "오프라인 경쟁력 강화 프로그램",
+      "상권 분석 및 재포지셔닝",
+      "매장 리뉴얼 지원",
+      "배달 수수료 최적화 컨설팅"
+    ],
+    "priority": "watch",
+    "priority_kr": "관찰 필요",
+    "estimated_recovery_period": "9-12개월",
+    "intervention_timing": "1개월 이내",
+    "success_rate": "50-60%",
+    "description": "배달 과의존으로 수익성 악화. 오프라인 강화 및 수익 구조 개선 필요"
+  },
+  "경쟁 열위형": {
+    "solutions": [
+      "경쟁력 강화 패키지",
+      "차별화 전략 수립 컨설팅",
+      "업종/상권 분석 서비스",
+      "메뉴 개발 및 품질 개선 지원"
+    ],
+    "priority": "watch",
+    "priority_kr": "관찰 필요",
+    "estimated_recovery_period": "6-12개월",
+    "intervention_timing": "1개월 이내",
+    "success_rate": "40-50%",
+    "description": "시장 내 경쟁력 약화. 차별화 및 포지셔닝 재정립 필요"
+  },
+  "정상": {
+    "solutions": [
+      "정기 모니터링",
+      "예방적 경영 진단",
+      "우수 경영 사례 공유",
+      "장기 성장 지원 프로그램"
+    ],
+    "priority": "normal",
+    "priority_kr": "정상",
+    "estimated_recovery_period": "N/A",
+    "intervention_timing": "정기 점검",
+    "success_rate": "N/A",
+    "description": "위험도 낮음 (risk_score < 50). 정기 모니터링 및 예방적 관리"
+  },
+  "기타 위험": {
+    "solutions": [
+      "정기 모니터링",
+      "예방적 경영 진단",
+      "업종별 리스크 교육"
+    ],
+    "priority": "normal",
+    "priority_kr": "기타",
+    "estimated_recovery_period": "N/A",
+    "intervention_timing": "정기 점검",
+    "success_rate": "N/A",
+    "description": "고위험이지만 명확한 위험 패턴 미감지. 정기 모니터링 지속"
+  }
+}

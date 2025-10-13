@@ -160,43 +160,39 @@ class FeatureEncoder:
         df: pd.DataFrame,
         close_date_col: str = 'MCT_ME_D',
         date_col: str = 'TA_YM',
-        merchant_col: str = 'ENCODED_MCT'
+        merchant_col: str = 'ENCODED_MCT',
+        prediction_window: int = 3
     ) -> pd.DataFrame:
         """
-        타겟 변수 생성
+        타겟 변수 생성 (Data Leakage 방지)
 
         생성 변수:
-        - is_closed: 폐업 여부 (0/1)
-        - will_close_1m: 1개월 내 폐업 예정 (0/1)
-        - will_close_3m: 3개월 내 폐업 예정 (0/1)
-        - months_until_close: 폐업까지 남은 개월 수
+        - will_close_1m: 1개월 내 폐업 예정 (0/1) - 미래 1개월 예측
+        - will_close_3m: 3개월 내 폐업 예정 (0/1) - 미래 3개월 예측 (주 타겟)
+        - months_until_close: 폐업까지 남은 개월 수 (참고용, feature로 사용 금지)
+        - is_valid_for_training: 학습에 사용 가능한 데이터인지 여부 (폐업 직전 제외)
+
+        주의:
+        - is_closed 변수는 data leakage를 유발하므로 생성하지 않음
+        - months_until_close <= 0인 데이터는 학습에서 제외해야 함 (이미 폐업했거나 폐업 당월)
 
         Args:
             df: 데이터프레임
             close_date_col: 폐업일 컬럼명
             date_col: 년월 컬럼명
             merchant_col: 가맹점 ID 컬럼명
+            prediction_window: 예측 윈도우 (개월)
 
         Returns:
             타겟 변수가 추가된 데이터프레임
         """
         print("\n" + "="*60)
-        print("CREATING TARGET VARIABLES")
+        print("CREATING TARGET VARIABLES (NO DATA LEAKAGE)")
         print("="*60)
 
         df_target = df.copy()
 
-        # 1. 폐업 여부 (is_closed)
-        df_target['is_closed'] = df_target[close_date_col].notna().astype(int)
-
-        closed_count = df_target['is_closed'].sum()
-        total_count = len(df_target)
-        closed_ratio = closed_count / total_count * 100
-
-        print(f"\nClosed merchants: {closed_count:,} ({closed_ratio:.2f}%)")
-        print(f"Active merchants: {total_count - closed_count:,} ({100-closed_ratio:.2f}%)")
-
-        # 2. 날짜 변환
+        # 1. 날짜 변환
         # TA_YM: YYYYMM 형식 → datetime
         df_target['date_parsed'] = pd.to_datetime(
             df_target[date_col].astype(str),
@@ -206,25 +202,27 @@ class FeatureEncoder:
 
         # MCT_ME_D: 폐업일 → datetime (YYYYMMDD 형식)
         # float/int → str → datetime 변환
+        has_close_date = df_target[close_date_col].notna()
         df_target['close_date_parsed'] = pd.to_datetime(
             df_target[close_date_col].astype('Int64').astype(str),
             format='%Y%m%d',
             errors='coerce'
         )
 
-        # 3. 폐업까지 남은 개월 수 계산
+        # 2. 폐업까지 남은 개월 수 계산
         df_target['months_until_close'] = np.nan
 
         # 폐업 가맹점만 계산
-        closed_mask = df_target['is_closed'] == 1
-        df_target.loc[closed_mask, 'months_until_close'] = (
-            (df_target.loc[closed_mask, 'close_date_parsed'].dt.year -
-             df_target.loc[closed_mask, 'date_parsed'].dt.year) * 12 +
-            (df_target.loc[closed_mask, 'close_date_parsed'].dt.month -
-             df_target.loc[closed_mask, 'date_parsed'].dt.month)
+        df_target.loc[has_close_date, 'months_until_close'] = (
+            (df_target.loc[has_close_date, 'close_date_parsed'].dt.year -
+             df_target.loc[has_close_date, 'date_parsed'].dt.year) * 12 +
+            (df_target.loc[has_close_date, 'close_date_parsed'].dt.month -
+             df_target.loc[has_close_date, 'date_parsed'].dt.month)
         )
 
-        # 4. 미래 N개월 내 폐업 예정
+        # 3. 미래 N개월 내 폐업 예정 (올바른 방법)
+        # months_until_close > 0: 아직 폐업하지 않은 시점
+        # months_until_close <= N: N개월 이내에 폐업 예정
         df_target['will_close_1m'] = (
             (df_target['months_until_close'] > 0) &
             (df_target['months_until_close'] <= 1)
@@ -235,20 +233,43 @@ class FeatureEncoder:
             (df_target['months_until_close'] <= 3)
         ).astype(int)
 
+        # 4. 학습 데이터로 사용 가능한지 여부
+        # - 영업 중인 가맹점 (close_date가 없음): 사용 가능
+        # - 폐업 가맹점이지만 아직 폐업 전 (months_until_close > 0): 사용 가능
+        # - 이미 폐업했거나 폐업 당월 (months_until_close <= 0): 사용 불가 (data leakage)
+        df_target['is_valid_for_training'] = (
+            (~has_close_date) |  # 영업 중
+            (df_target['months_until_close'] > 0)  # 폐업 전
+        ).astype(int)
+
         # 통계 출력
         print("\n" + "-"*60)
         print("TARGET VARIABLE STATISTICS")
         print("-"*60)
-        print(f"is_closed = 1: {df_target['is_closed'].sum():,}")
-        print(f"will_close_1m = 1: {df_target['will_close_1m'].sum():,}")
-        print(f"will_close_3m = 1: {df_target['will_close_3m'].sum():,}")
+
+        total_count = len(df_target)
+        valid_count = df_target['is_valid_for_training'].sum()
+        invalid_count = total_count - valid_count
+
+        print(f"Total records: {total_count:,}")
+        print(f"Valid for training: {valid_count:,} ({valid_count/total_count*100:.2f}%)")
+        print(f"Invalid (already closed): {invalid_count:,} ({invalid_count/total_count*100:.2f}%)")
+
+        print(f"\nTarget distribution (valid data only):")
+        valid_data = df_target[df_target['is_valid_for_training'] == 1]
+        print(f"will_close_1m = 1: {valid_data['will_close_1m'].sum():,} ({valid_data['will_close_1m'].sum()/len(valid_data)*100:.2f}%)")
+        print(f"will_close_3m = 1: {valid_data['will_close_3m'].sum():,} ({valid_data['will_close_3m'].sum()/len(valid_data)*100:.2f}%)")
 
         if df_target['months_until_close'].notna().sum() > 0:
-            print(f"\nMonths until close (for closed merchants):")
-            print(df_target['months_until_close'].describe())
+            print(f"\nMonths until close (for merchants with close date):")
+            print(df_target[df_target['months_until_close'].notna()]['months_until_close'].describe())
 
         # 임시 컬럼 제거
         df_target.drop(['date_parsed', 'close_date_parsed'], axis=1, inplace=True)
+
+        print("\n" + "="*60)
+        print("IMPORTANT: Use only records where is_valid_for_training=1")
+        print("="*60)
 
         return df_target
 
@@ -368,10 +389,10 @@ def encode_features_and_targets(
         encoder = FeatureEncoder()
         df_encoded = encoder.create_target_variables(df_encoded)
         created_cols['target_vars'] = [
-            'is_closed',
             'will_close_1m',
             'will_close_3m',
-            'months_until_close'
+            'months_until_close',
+            'is_valid_for_training'
         ]
 
     # 3. 날짜 특성 추출
@@ -419,4 +440,5 @@ if __name__ == "__main__":
     print(df_encoded.iloc[:, :10])
 
     print("\nTarget variables:")
-    print(df_encoded[['is_closed', 'will_close_1m', 'will_close_3m']])
+    if 'will_close_1m' in df_encoded.columns:
+        print(df_encoded[['will_close_1m', 'will_close_3m', 'is_valid_for_training']])
